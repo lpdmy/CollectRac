@@ -32,7 +32,7 @@ public class GarbageTruck {
             sum = sum + garbageList.get(index);
             time = time + loadTime;
             index++;
-            if (index == garbageList.size()) return;
+            if (index == garbageList.size()) break;
         }
          countTruck++;
 }

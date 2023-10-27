@@ -19,8 +19,8 @@ public class GarbageTruck {
         double money = 0;
         while (index < garbageList.size()) {
         collectGarbage(garbageList); 
-        time = time + dumpTime;
         }
+        time = garbageList.size()* loadTime + dumpTime*countTruck;
         money = (double) time/60*costPerHour+dumpCost*countTruck;
         return money;
     }
@@ -30,7 +30,6 @@ public class GarbageTruck {
         
         while (sum+garbageList.get(index)<=maxCapacity) {
             sum = sum + garbageList.get(index);
-            time = time + loadTime;
             index++;
             if (index == garbageList.size()) break;
         }
